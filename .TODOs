@@ -1,0 +1,15 @@
+//TODOs
+
+// TODO-1: use express
+// TODO-2: input and output must be json
+// TODO-3: validate income request for at least 2 terms are provided by the user
+// TODO-4: generate (at least) 10 different domains
+// TODO-5: Integration with a 3rd party service will be used to check the availability of these domains.
+// TODO-6: Adding authentication layer (JWT-tokens)
+// TODO-7: Provide a limitation on API call, 5 calls per day for each user
+// TODO-8: Creating postman collection, and publishing it 
+// TODO-9: Creating frontend page to use the service
+
+// Packages to use
+// 1- validator.js
+// 2- nodemon
