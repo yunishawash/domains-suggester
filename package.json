@@ -1,0 +1,17 @@
+{
+  "name": "domains-suggester",
+  "version": "1.0.0",
+  "description": "Application that suggests posibble domains for given inputkeywords",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "domains"
+  ],
+  "author": "yunis.hawash@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
