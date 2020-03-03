@@ -1,9 +1,21 @@
 // constants
 const express = require('express');
 const app = express();
+const bodyParser = require("body-parser");
+
+// using bodyParser to extract the body and get the json data
+app.use(
+  bodyParser.urlencoded({
+    extended: true
+  })
+);
+
+// use the body parse by express app
+app.use(bodyParser.json());
 
 // routes
 app.get("/suggestions", (req, res) => {
+
   // return data-mocks 
   res.send({
     data: {
