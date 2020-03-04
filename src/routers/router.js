@@ -2,16 +2,12 @@
 
 const express = require('express');
 const router = new express.Router();
-const rateLimit = require("express-rate-limit");
 // validators
 const keywordsValidator = require("../validators/keywords-validator");
 // api throttling limiter 
-const apiLimiter = rateLimit({
-  windowMs: 1 * 60 * 1000, // 15 minutes
-  max: 20
-});
-
-router.use("/api/", apiLimiter);
+const domainsSuggestionsLimiter = require("../limiters/domains-suggestions-limiter");
+// user the apiLimiter by the express router
+router.use("/api/", domainsSuggestionsLimiter);
 // routes
 router.get("/api/suggestions", (req, res) => {
 

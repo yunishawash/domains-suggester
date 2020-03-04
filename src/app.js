@@ -1,5 +1,4 @@
 'use strict'
-
 // required files
 require("./validators/custom-validation-rules");
 require("./resources/lang/en/validation");
