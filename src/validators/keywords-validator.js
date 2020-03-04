@@ -33,8 +33,7 @@ module.exports = internal.keywordsValidator = class {
    */
   rules = () => {
     return {
-      keywords: "required|array|array_min:2",
-      name: "required"
+      keywords: "required|array|array_min:2"
     };
   };
 

@@ -1,3 +1,5 @@
+'use strict'
+
 const niv = require("node-input-validator");
 
 // adding custome array minimum size validation rule, since the package of 'node-input-validator' doesn't support
