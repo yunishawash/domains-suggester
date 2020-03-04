@@ -12,6 +12,7 @@
   "author": "yunis.hawash@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "node-input-validator": "^4.2.0"
   }
 }
