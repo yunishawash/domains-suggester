@@ -1,3 +1,5 @@
+'use strict'
+
 const niv = require("node-input-validator");
 
 // adding custome array size message 
