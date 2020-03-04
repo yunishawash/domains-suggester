@@ -21,6 +21,7 @@ module.exports = internal.keywordsValidator = class {
     this.rules = this.rules.bind(this);
     this.isValid = this.isValid.bind(this);
     this.getErrors = this.getErrors.bind(this);
+    this.setErrors = this.setErrors.bind(this);
   }
   
 
