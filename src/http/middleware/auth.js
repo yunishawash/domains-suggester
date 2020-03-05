@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken");
-const { masterKey } = require("../config");
+const { masterKey } = require("../../config");
 /**
  * 
  * @param {*} req request object
