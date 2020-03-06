@@ -8,7 +8,7 @@ const auth = require("../http/middleware/auth");
 const authController = require("../http/controllers/auth-controller");
 const domainsSuggesterController = require("../http/controllers/domains-suggester-controller");
 // use the apiLimiter by the express router
-// router.use("/api/", domainsSuggestionsLimiter);
+router.use("/api/", domainsSuggestionsLimiter);
 // routes
 router.get("/api/get-token", authController.auth );
 router.get("/api/domains-suggestions", auth, domainsSuggesterController.suggestions);
