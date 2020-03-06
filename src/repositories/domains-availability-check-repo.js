@@ -9,22 +9,23 @@ const { availabilityApi, availabilityApiToken } = require("../config");
  * 
  */
 exports.checkDomainsAvailability =  async (domains) => {
-        // TODO: if there is enough time, do a bulk api for all of the domains
 
-        let domainsWithAvailability = [];
+    // TODO: if there is enough time, do a bulk api for all of the domains
 
-        for (let index = 0; index < domains.length; index++) {
+    let domainsWithAvailability = [];
 
-            const e = domains[index];
-            
-            let availability =  await checkDomainAvailability(e.domain);
-            domainsWithAvailability.push({
-                     domain: e.domain,
-                    availability: availability
-            });
-        }
+    for (let index = 0; index < domains.length; index++) {
 
-        return (domainsWithAvailability); 
+        const e = domains[index];
+        
+        let availability =  await checkDomainAvailability(e.domain);
+        domainsWithAvailability.push({
+                domain: e.domain,
+                availability: availability
+        });
+    }
+
+    return (domainsWithAvailability); 
 
 };
 

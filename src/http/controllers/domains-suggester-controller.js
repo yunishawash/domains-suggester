@@ -19,10 +19,11 @@ exports.suggestions = (req, res) => {
   let kv = new keywordsValidator(req);
   // check wether the input data is valid or not
   kv.isValid()
+    // if data is valid get suggestions
     .then(async data => {
-        // if data is valid get suggestions
-        suggestions = await domainsSuggesterRepo.getSuggestions();
-        // send suggestions created by the domainsSuggesterRepo to the domain availability checke repo 
+        let numberOfSuggestions = req.body.num_of_suggestions > 2 ? req.body.num_of_suggestions : 2;
+        suggestions = await domainsSuggesterRepo.getDomainSuggestions(req.body.keywords, numberOfSuggestions, req.body.tld);
+        // // send suggestions created by the domainsSuggesterRepo to the domain availability checke repo 
         suggestionsWithAvailability = await domainsAvailabilityCheckRepo.checkDomainsAvailability(suggestions);
     
         res.send({
