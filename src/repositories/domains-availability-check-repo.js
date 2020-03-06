@@ -48,7 +48,6 @@ checkDomainAvailability =  domain => {
       request.get({ url: url }, (err, response) => {
 
         let data = JSON.parse(response.body);
-
         resolve(data.WhoisRecord.domainAvailability == "AVAILABLE");
 
       });
