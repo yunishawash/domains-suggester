@@ -21,7 +21,7 @@ exports.suggestions = (req, res) => {
   kv.isValid()
     // if data is valid get suggestions
     .then(async data => {
-        let numberOfSuggestions = req.body.num_of_suggestions > 2 ? req.body.num_of_suggestions : 2;
+        let numberOfSuggestions = req.body.num_of_suggestions > 10 ? req.body.num_of_suggestions : 10;
         suggestions = await domainsSuggesterRepo.getDomainSuggestions(req.body.keywords, numberOfSuggestions, req.body.tld);
         // // send suggestions created by the domainsSuggesterRepo to the domain availability checke repo 
         suggestionsWithAvailability = await domainsAvailabilityCheckRepo.checkDomainsAvailability(suggestions);
