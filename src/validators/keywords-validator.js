@@ -23,13 +23,12 @@ module.exports = internal.keywordsValidator = class {
     this.getErrors = this.getErrors.bind(this);
     this.setErrors = this.setErrors.bind(this);
   }
-  
 
   /**
    *
    * Initiate the rules of the request
    *
-   * @return array object object contains the request input and the rules must be applied to it
+   * @return  {object} object contains the request input and the rules must be applied to it
    *
    */
   rules = () => {
@@ -42,10 +41,9 @@ module.exports = internal.keywordsValidator = class {
    *
    * Check wether the request body is valid upon the rules in rules function
    *
-   * @return array object object contains the request input and the rules must be applied to it
+   * @return {*}  object contains the request input and the rules must be applied to it
    *
    */
-
   isValid = () => {
     // initiate validator pass the body inouts and validation rules
     const v = new Validator(this.req.body, this.rules());
@@ -67,7 +65,7 @@ module.exports = internal.keywordsValidator = class {
    * a setter for errors paramter
    *
    * @param errors array of objects of the rules had been failed to be verified upon the request body inputs
-   * @return array object object contains the request input and the rules must be applied to it
+   * @return {object} set the errors array 
    *
    */
   setErrors = errors => {
@@ -78,7 +76,7 @@ module.exports = internal.keywordsValidator = class {
    *
    * a getter for errors paramter
    *
-   * @return array object object contains the request input and the rules must be applied to it
+   * @return {object} object contains the request input and the failed rules
    *
    */
   getErrors = () => {
